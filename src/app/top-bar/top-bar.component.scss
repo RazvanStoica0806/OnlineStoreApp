@@ -1,0 +1,18 @@
+.header{
+  height: 4.375rem;
+  background-color: #027902;
+  border-bottom: #027902;;
+}
+
+.search{
+  &__input{
+
+  }
+
+  &__button{
+
+    &__icon{
+      background-image: url("../../img/sprite.svg");
+    }
+  }
+}
