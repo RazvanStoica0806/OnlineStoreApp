@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'OnlineStore';
+
+
+  constructor() {
+    console.log('test my remote repository');
+  }
 }
