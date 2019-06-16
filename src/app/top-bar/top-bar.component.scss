@@ -2,6 +2,12 @@
   height: 4.375rem;
   background-color: #027902;
   border-bottom: #027902;;
+
+  &__logo{
+    background:url('../../assets/img/logo.png') no-repeat center center;
+    height: 4.375rem;
+  }
+
 }
 
 .search{
@@ -12,7 +18,19 @@
   &__button{
 
     &__icon{
-      background-image: url("../../img/sprite.svg");
+      //background-image: url("../../img/sprite.svg");
+    }
+  }
+}
+
+.user-nav{
+  
+  &__user{
+
+    &-photo{
+      background:url('../../assets/img/user.png') no-repeat center center;
+      height: 4.375rem;
+
     }
   }
 }
