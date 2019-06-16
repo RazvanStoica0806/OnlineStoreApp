@@ -24,7 +24,6 @@
     "@angular/platform-browser": "~8.0.1",
     "@angular/platform-browser-dynamic": "~8.0.1",
     "@angular/router": "~8.0.1",
-    "angular-svg-icon": "^7.2.1",
     "bootstrap": "^4.3.1",
     "core-js": "^3.1.4",
     "node-sass": "^4.12.0",
