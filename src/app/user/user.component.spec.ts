@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, fakeAsync, TestBed, tick} from '@angular/core/testing';
 
 import { UserComponent } from './user.component';
 import {UserService} from './user.service';
@@ -10,10 +10,10 @@ describe('UserComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ UserComponent ],
+      declarations: [UserComponent],
       providers: [UserService, DataService]
     })
-    .compileComponents(); //this is not needed when using webpack
+      .compileComponents(); //this is not needed when using webpack
   }));
 
   beforeEach(() => {
@@ -45,11 +45,35 @@ describe('UserComponent', () => {
     expect(compiled.querySelector('p').textContent).not.toContain(component.user.name); //this is correct
   });
 
-  it('shouldn\'t fetch data successfully if not called asynchronously' , function () {
+  it('shouldn\'t fetch data successfully if not called asynchronously', function () {
     let dataService = fixture.debugElement.injector.get(DataService);
-      let spy = spyOn(dataService, 'getDetails')
-        .and.returnValue(Promise.resolve('Data'));
-      fixture.detectChanges();
-      expect(component.data).toBe(undefined);
+    let spy = spyOn(dataService, 'getDetails')
+      .and.returnValue(Promise.resolve('Data'));
+    fixture.detectChanges();
+    expect(component.data).toBe(undefined);
   });
+
+  it('should fetch data successfully if not called asynchronously', async(() => {
+    let dataService = fixture.debugElement.injector.get(DataService);
+    let spy = spyOn(dataService, 'getDetails')
+      .and.returnValue(Promise.resolve('Data'));
+    fixture.detectChanges();
+    //Once the asynchronous task has been finished and then I expect it to be data
+    fixture.whenStable().then(() => {
+      expect(component.data).toBe('Data');
+    });
+  }));
+
+  //Same as the text upwards but with fakeAsync and tick instead
+  // it('should fetch data successfully if not called asynchronously', fakeAsync(() => {
+  //   let dataService = fixture.debugElement.injector.get(DataService);
+  //   let spy = spyOn(dataService, 'getDetails')
+  //     .and.returnValue(Promise.resolve('Data'));
+  //   fixture.detectChanges();
+  //   tick();
+  //   expect(component.data).toBe('Data');
+  // }));
+
+
+
 });

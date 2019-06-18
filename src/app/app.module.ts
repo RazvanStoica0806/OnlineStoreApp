@@ -5,6 +5,7 @@ import {AppComponent} from './app.component';
 import {UserComponent} from './user/user.component';
 import {FormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
+import {UserService} from './user/user.service';
 
 @NgModule({
   declarations: [
@@ -15,10 +16,10 @@ import {RouterModule} from '@angular/router';
     BrowserModule,
     FormsModule,
     RouterModule.forRoot([
-      {path: 'user', component: UserComponent}
+      {path: 'users', component: UserComponent}
     ])
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
