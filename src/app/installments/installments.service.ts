@@ -16,7 +16,7 @@ export class InstallmentsService {
   getInstallments(): Observable<IInstallments[]> {
     return this.http.get<IInstallments[]>(this.productUrl).pipe(
       // map((data:any) => data.result),
-      tap(data => console.log('All: ' + JSON.stringify(data))),
+      // tap(data => console.log('All: ' + JSON.stringify(data))),
       catchError(this.handleError)
     );
   }

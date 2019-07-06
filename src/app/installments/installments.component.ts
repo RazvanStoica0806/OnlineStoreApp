@@ -10,9 +10,10 @@ import {IInstallments} from './installments';
 export class InstallmentsComponent implements OnInit {
 
   installments: IInstallments[] = [];
+  clicked: boolean;
 
   constructor(private installmentsService: InstallmentsService) {
-    console.log('a ajuns pe installments');
+    this.clicked = false;
   }
 
   ngOnInit() {
@@ -23,13 +24,15 @@ export class InstallmentsComponent implements OnInit {
         console.log(installments);
         this.installments = Object.keys(installments).map(it => installments[it]);
 
-        var i = 0;
-        for (i; i < this.installments.length; i++) {
-          console.log('installments elements:', this.installments[i]);
-        }
+
+
       },
       error => console.log('error on subscribe')
     );
+  }
+
+  userHasClicked(){
+    this.clicked = !this.clicked;
   }
 
 }

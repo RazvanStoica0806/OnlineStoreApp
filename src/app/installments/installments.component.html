@@ -1,28 +1,71 @@
-<div class="installments__container">
-  <div class="installments__header">
-    <div class="installments__header-length" *ngFor="let installment of installments">
-      <p>{{installment.length}} Active installments</p>
-    </div>
-    <div class="installments__header-toggle">
-      <span>Fold up</span>
-    </div>
+<!--<div class="installments__container">-->
+  <!--<div class="installments__header" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"-->
+       <!--expanded="true" aria-controls="collapseOne">-->
+    <!--<div class="installments__header-length" *ngFor="let installment of installments">-->
+      <!--<p>{{installment.length}} Active installments</p>-->
+    <!--</div>-->
+    <!--<div class="installments__header-toggle">-->
+      <!--<span>Fold up</span>-->
+    <!--</div>-->
+  <!--</div>-->
+  <!--<div *ngFor="let array of installments" id="collapseOne" class="panel-collapse collapse in" role="tabpanel"-->
+       <!--aria-labelledby="headingOne">-->
+    <!--<div class="installments__row" *ngFor="let element of array" (click)="userHasClicked()"-->
+         <!--data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"-->
+         <!--expanded="true" aria-controls="collapseTwo">-->
+      <!--<div class="installments__row-date">-->
+        <!--<p>{{element.purchaseDate | date : 'd MMM' | uppercase}}</p>-->
+      <!--</div>-->
+      <!--<div class="installments__row-svg"></div>-->
+      <!--<div class="installments__row-merchantName">-->
+        <!--<span>{{element.merchantName}}</span>-->
+        <!--<span>Installment {{element.instalmentsCurrentNo}} out of {{element.totalInstallmentsNumber}} to be paid</span>-->
+      <!--</div>-->
+      <!--<div class="installments__row-sum">-->
+        <!--<span>{{element.installmentAmount.value}}</span>-->
+        <!--<span>{{element.installmentAmount.currency}}</span>-->
+      <!--</div>-->
+      <!--<div class="close__div" id="collapseTwo" class="panel-collapse collapse in" role="tabpanel"-->
+           <!--aria-labelledby="headingOne" *ngIf="clicked">-->
+        <!--Razvamasfas-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+  <!--<div>-->
+  <!--</div>-->
+<!--</div>-->
+
+
+<div class="installments__header" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+     expanded="true" aria-controls="collapseOne">
+  <div class="installments__header-length" *ngFor="let installment of installments">
+    <p>{{installment.length}} Active installments</p>
   </div>
-  <div *ngFor="let installment of installments">
-    <div class="installments__row" *ngFor="let element of installment">
-      <div class="installments__row-date">
-        <p>{{element.purchaseDate}}</p>
-      </div>
-      <div class="installments__row-svg"></div>
-      <div class="installments__row-merchantName">
-        <span>{{element.merchantName}}</span>
-        <span>Installment {{element.instalmentsCurrentNo}} out of {{element.totalInstallmentsNumber}} to be paid</span>
-      </div>
-      <div class="installments__row-sum">
-        <span>{{element.installmentAmount.value}}</span>
-        <span>{{element.installmentAmount.currency}}</span>
-      </div>
-    </div>
+  <div class="installments__header-toggle">
+    <span>Fold up</span>
   </div>
 </div>
-
+<table class="table panel-collapse collapse in"  id="collapseOne"  role="tabpanel"
+       aria-labelledby="headingOne" (click)="userHasClicked()">
+  <thead *ngFor="let array of installments">
+  <tr *ngFor="let element of array" class="">
+    <div class="installments__row-date">
+      <p>{{element.purchaseDate | date : 'd MMM' | uppercase}}</p>
+    </div>
+    <div class="installments__row-svg"></div>
+    <div class="installments__row-merchantName">
+      <p>{{element.merchantName}}</p>
+      <p>Installment {{element.instalmentsCurrentNo}} out of {{element.totalInstallmentsNumber}} to be paid</p>
+    </div>
+    <div class="installments__row-sum">
+      <span>{{element.installmentAmount.value}}</span>
+      <span>{{element.installmentAmount.currency}}</span>
+    </div>
+    <div class="close__div" id="collapseTwo" class="panel-collapse collapse in" role="tabpanel"
+         aria-labelledby="headingOne" *ngIf="clicked" style="display: block">
+      Razvan
+    </div>
+  </tr>
+  </thead>
+</table>
 
