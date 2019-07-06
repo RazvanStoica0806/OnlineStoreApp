@@ -1,0 +1,79 @@
+{
+  "merchantInstallments" : [
+    {
+    "merchantName" : "Revolut*0960*",
+    "totalAmount" : {
+      "value" : 200000,
+      "precision" : 2,
+      "currency" : "RON"
+    },
+    "installmentAmount" : {
+      "value" : 33304,
+      "precision" : 2,
+      "currency" : "RON"
+    },
+    "totalInstallmentsNumber" : 6,
+    "instalmentsCurrentNo" : 6,
+    "purchaseDate" : "2019-07-01"
+  }, {
+    "merchantName" : "LIU JO PROMENADA",
+    "totalAmount" : {
+      "value" : 108100,
+      "precision" : 2,
+      "currency" : "RON"
+    },
+    "installmentAmount" : {
+      "value" : 18017,
+      "precision" : 2,
+      "currency" : "RON"
+    },
+    "totalInstallmentsNumber" : 6,
+    "instalmentsCurrentNo" : 5,
+    "purchaseDate" : "2019-07-01"
+  }, {
+    "merchantName" : "DRIVE PERFECT SRL",
+    "totalAmount" : {
+      "value" : 36885,
+      "precision" : 2,
+      "currency" : "RON"
+    },
+    "installmentAmount" : {
+      "value" : 12295,
+      "precision" : 2,
+      "currency" : "RON"
+    },
+    "totalInstallmentsNumber" : 3,
+    "instalmentsCurrentNo" : 3,
+    "purchaseDate" : "2019-07-01"
+  }, {
+    "merchantName" : "IKEA ROMANIA SRL",
+    "totalAmount" : {
+      "value" : 52680,
+      "precision" : 2,
+      "currency" : "RON"
+    },
+    "installmentAmount" : {
+      "value" : 17560,
+      "precision" : 2,
+      "currency" : "RON"
+    },
+    "totalInstallmentsNumber" : 3,
+    "instalmentsCurrentNo" : 2,
+    "purchaseDate" : "2019-07-01"
+  }, {
+    "merchantName" : "GUESS BANEASA MALL",
+    "totalAmount" : {
+      "value" : 106400,
+      "precision" : 2,
+      "currency" : "RON"
+    },
+    "installmentAmount" : {
+      "value" : 17733,
+      "precision" : 2,
+      "currency" : "RON"
+    },
+    "totalInstallmentsNumber" : 6,
+    "instalmentsCurrentNo" : 2,
+    "purchaseDate" : "2019-07-01"
+  } ]
+}

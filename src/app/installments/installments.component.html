@@ -1,0 +1,28 @@
+<div class="installments__container">
+  <div class="installments__header">
+    <div class="installments__header-length" *ngFor="let installment of installments">
+      <p>{{installment.length}} Active installments</p>
+    </div>
+    <div class="installments__header-toggle">
+      <span>Fold up</span>
+    </div>
+  </div>
+  <div *ngFor="let installment of installments">
+    <div class="installments__row" *ngFor="let element of installment">
+      <div class="installments__row-date">
+        <p>{{element.purchaseDate}}</p>
+      </div>
+      <div class="installments__row-svg"></div>
+      <div class="installments__row-merchantName">
+        <span>{{element.merchantName}}</span>
+        <span>Installment {{element.instalmentsCurrentNo}} out of {{element.totalInstallmentsNumber}} to be paid</span>
+      </div>
+      <div class="installments__row-sum">
+        <span>{{element.installmentAmount.value}}</span>
+        <span>{{element.installmentAmount.currency}}</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+

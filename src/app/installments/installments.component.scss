@@ -1,0 +1,118 @@
+.installments__container{
+  display: flex;
+  flex-direction: column;
+  background-color: DodgerBlue;
+  padding: 8rem;
+}
+
+
+.installments__header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #ffff;
+  cursor: pointer;
+  border-radius: 4px;
+
+  &-length{
+    margin: 10px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 15px;
+
+    p{
+      font-size: 2rem;
+      color: #00385e;
+      font-weight: 200;
+    }
+  }
+
+  &-toggle{
+    margin: 10px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 15px;
+  }
+}
+
+.installments__row{
+  display: flex;
+
+  background-color: #f1f1f1;
+  border-radius: 4px;
+  border-left: solid 3px #1B5D96;
+  cursor: pointer;
+
+  &-date{
+    display: flex;
+    justify-content: center;
+
+    background-color: #f1f1f1;
+    width: 100px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 15px;
+
+    border-right: solid 3px #ffff;
+    border-bottom: solid 3px #ffff;
+  }
+
+  &-svg{
+    display: flex;
+    justify-content: center;
+
+    background-color: #f1f1f1;
+    width: 100px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 15px;
+
+    border-right: solid 3px #ffff;
+    border-bottom: solid 3px #ffff;
+
+  }
+
+  &-merchantName{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+
+    background-color: #f1f1f1;
+    width: 100px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 15px;
+    border-right: solid 3px #ffff;
+    border-bottom: solid 3px #ffff;
+
+    span{
+      align-self: self-start;
+    }
+  }
+
+  &-sum{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #f1f1f1;
+    width: 100px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 15px;
+
+    border-right: solid 3px #ffff;
+    border-bottom: solid 3px #ffff;
+
+    span{
+      margin: 3px;
+    }
+
+  }
+}
+
+.group {
+  display: block;
+}
